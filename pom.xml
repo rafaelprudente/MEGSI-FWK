@@ -10,7 +10,7 @@
     </parent>
     <groupId>pt.iti</groupId>
     <artifactId>framework</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>framework</name>
     <description>framework</description>
     <url/>
