@@ -2,7 +2,33 @@ pipeline {
     agent any
         tools {
             maven 'MVN'
+    }
+    stage('Criar settings.xml') {
+        steps {
+            sh '''
+                cat << 'EOF' > settings.xml
+                <settings>
+                    <servers>
+                    <server>
+                        <id>onedev</id>
+                        <username>admin</username>
+                        <password>H4EnOm154rWviHDSGpVOIm7aQYgvD1Ol2kJyiCmT</password>
+                    </server>
+                    </servers>
+
+                    <mirrors>
+                    <mirror>
+                        <id>maven-default-http-blocker</id>
+                        <mirrorOf>dummy</mirrorOf>
+                        <name>Dummy mirror to override default blocking mirror that blocks http</name>
+                        <url>http://0.0.0.0/</url>
+                    </mirror>
+                    </mirrors>
+                </settings>
+                EOF
+            '''
         }
+    }
     stages {
         stage('Build') {
             steps {
