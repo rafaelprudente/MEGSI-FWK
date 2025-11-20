@@ -4,7 +4,7 @@ pipeline {
             maven 'MVN'
     }
     stages {
-        stage('Criar settings.xml') {
+        stage('Create settings.xml') {
             steps {
                 sh '''
                     cat << 'EOF' > settings.xml
