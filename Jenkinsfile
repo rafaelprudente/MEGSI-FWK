@@ -25,7 +25,7 @@ pipeline {
                             <url>http://0.0.0.0/</url>
                         </mirror>
                     </mirrors>
-                </settings>EOF'''
+                </settings>'''
             }
         }
         stage('Build') {
