@@ -20,6 +20,6 @@ public class EurekaPortFix implements ApplicationListener<WebServerInitializedEv
         eurekaInstanceConfig.setNonSecurePort(port);
         // Se você também usa HTTPS:
         // eurekaInstanceConfig.setSecurePortEnabled(false);
-        log.info("Eureka port fixed to {}", System.getProperty("eureka.instance.nonSecurePort"));
+        log.info("Eureka port fixed to {}", eurekaInstanceConfig.getNonSecurePort());
     }
 }
